@@ -19,4 +19,3 @@ jobs:
     - name: Run lint MD
       run: |
         echo "It works!"
-        echo "from action lint" >> /github/home/file.txt
