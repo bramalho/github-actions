@@ -1,0 +1,22 @@
+name: Lint MD
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    
+    - name: Set Node
+      uses: actions/setup-node@master
+      with:
+        version: 10.x
+
+    - name: Install NPM
+      run: npm install
+
+    - name: Run a multi-line script
+      run: |
+        echo "Hello!"
+        echo "It works!"
