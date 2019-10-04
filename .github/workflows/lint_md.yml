@@ -3,7 +3,7 @@ name: Lint MD
 on: [push, pull_request]
 
 jobs:
-  build:
+  lint_md:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
@@ -16,7 +16,7 @@ jobs:
     - name: Install NPM
       run: npm install
 
-    - name: Run a multi-line script
+    - name: Run lint MD
       run: |
-        echo "Hello!"
         echo "It works!"
+        echo "from action lint" >> /github/home/file.txt
