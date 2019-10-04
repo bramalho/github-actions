@@ -1,6 +1,6 @@
 name: Lint MD
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   build:
