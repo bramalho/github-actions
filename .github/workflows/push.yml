@@ -5,11 +5,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
+    
     - name: lint_md
-      uses: ./actions/lint_md/
+      uses: .github/actions/lint_md/
       env:
         MESSAGE: Hello World
+    
     - name: build
-      uses: ./actions/build/
+      uses: .github/actions/build/
+    
     - name: deploy
-      uses: ./actions/deploy/
+      uses: .github/actions/deploy/
