@@ -1,0 +1,15 @@
+on: push
+name: Main Workflow
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: lint_md
+      uses: ./actions/lint_md/
+      env:
+        MESSAGE: Hello World
+    - name: build
+      uses: ./actions/build/
+    - name: deploy
+      uses: ./actions/deploy/
