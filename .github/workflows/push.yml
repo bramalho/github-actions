@@ -7,10 +7,10 @@ jobs:
     - uses: actions/checkout@master
 
     - name: test
-      run: ls -la
+      run: ls -la /home/runner/work/github-actions/github-actions/ci/actions/lint_md
     
     - name: lint_md
-      uses: ./ci/actions/lint_md/
+      uses: ./ci/actions/lint_md/Dockerfile
       env:
         MESSAGE: Hello World
     
