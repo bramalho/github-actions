@@ -1,21 +1,8 @@
-name: Lint MD
+workflow "New workflow" {
+  on = "push"
+  resolves = ["GitHub Action for npm"]
+}
 
-on: [push, pull_request]
-
-jobs:
-  lint_md:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v1
-    
-    - name: Set Node
-      uses: actions/setup-node@master
-      with:
-        node-version: 10.x
-
-    - name: Install NPM
-      run: npm install
-
-    - name: Run lint MD
-      run: |
-        echo "It works!"
+action "GitHub Action for npm" {
+  uses = "actions/npm@f11f0a33bb81074e6448ed3737cbc6ca4e1318d2"
+}
