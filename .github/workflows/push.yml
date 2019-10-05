@@ -6,9 +6,6 @@ jobs:
     steps:
     - uses: actions/checkout@master
 
-    - name: test
-      run: ls -la /home/runner/work/github-actions/github-actions/ci/actions/lint_md
-    
     - name: lint_md
       uses: ./.github/actions/lint_md
       env:
