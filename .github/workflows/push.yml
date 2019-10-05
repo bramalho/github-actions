@@ -10,12 +10,12 @@ jobs:
       run: ls -la
     
     - name: lint_md
-      uses: ./.github/actions/lint_md/
+      uses: ./ci/actions/lint_md/
       env:
         MESSAGE: Hello World
     
     - name: build
-      uses: ./.github/actions/build/
+      uses: ./ci/actions/build/
     
     - name: deploy
-      uses: ./.github/actions/deploy/
+      uses: ./ci/actions/deploy/
