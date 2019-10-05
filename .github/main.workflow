@@ -1,5 +1,5 @@
 workflow "Main Workflow" {
-  on = "pull"
+  on = "push"
   resolves = ["deploy"]
 }
 
