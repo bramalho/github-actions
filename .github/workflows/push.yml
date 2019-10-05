@@ -1,10 +1,13 @@
 on: push
-name: Main Workflow
+name: CI
 jobs:
   ci:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout
+
+    - name: test
+      run: ls -la
     
     - name: lint_md
       uses: ./.github/actions/lint_md/
